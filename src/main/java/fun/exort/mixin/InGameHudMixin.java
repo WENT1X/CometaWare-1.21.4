@@ -1,6 +1,6 @@
 package fun.exort.mixin;
 
-import fun.exort.ExortWare;
+import fun.exort.CometaWare;
 import fun.exort.event.list.EventHUD;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
@@ -14,6 +14,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class InGameHudMixin {
     @Inject(method = "render", at = @At(value = "HEAD"))
     private void render(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
-        ExortWare.getInstance().getEventBus().post(new EventHUD(context, tickCounter));
+        CometaWare.getInstance().getEventBus().post(new EventHUD(context, tickCounter));
     }
 }

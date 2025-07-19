@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"fun.exort.ExortWare"
+          "fun.exort.CometaWare"
 		]
 	},
 	"mixins": [

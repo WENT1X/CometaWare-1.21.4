@@ -1,6 +1,6 @@
 package fun.exort.mixin;
 
-import fun.exort.ExortWare;
+import fun.exort.CometaWare;
 import fun.exort.module.list.render.NoRender;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.InGameOverlayRenderer;
@@ -16,21 +16,21 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class InGameOverlayRendererMixin {
     @Inject(method = "renderFireOverlay", at = @At(value = "HEAD"), cancellable = true)
     private static void renderFireOverlay(MatrixStack matrices, VertexConsumerProvider vertexConsumers, CallbackInfo ci) {
-        if (ExortWare.getInstance().getModuleStorage().get(NoRender.class).isEnabled() && ExortWare.getInstance().getModuleStorage().get(NoRender.class).fire.getValue()) {
+        if (CometaWare.getInstance().getModuleStorage().get(NoRender.class).isEnabled() && CometaWare.getInstance().getModuleStorage().get(NoRender.class).fire.getValue()) {
             ci.cancel();
         }
     }
 
     @Inject(method = "renderUnderwaterOverlay", at = @At(value = "HEAD"), cancellable = true)
     private static void renderUnderwaterOverlay(MinecraftClient client, MatrixStack matrices, VertexConsumerProvider vertexConsumers, CallbackInfo ci) {
-        if (ExortWare.getInstance().getModuleStorage().get(NoRender.class).isEnabled() && ExortWare.getInstance().getModuleStorage().get(NoRender.class).water.getValue()) {
+        if (CometaWare.getInstance().getModuleStorage().get(NoRender.class).isEnabled() && CometaWare.getInstance().getModuleStorage().get(NoRender.class).water.getValue()) {
             ci.cancel();
         }
     }
 
     @Inject(method = "renderInWallOverlay", at = @At(value = "HEAD"), cancellable = true)
     private static void renderInWallOverlay(Sprite sprite, MatrixStack matrices, VertexConsumerProvider vertexConsumers, CallbackInfo ci) {
-        if (ExortWare.getInstance().getModuleStorage().get(NoRender.class).isEnabled() && ExortWare.getInstance().getModuleStorage().get(NoRender.class).wall.getValue()) {
+        if (CometaWare.getInstance().getModuleStorage().get(NoRender.class).isEnabled() && CometaWare.getInstance().getModuleStorage().get(NoRender.class).wall.getValue()) {
             ci.cancel();
         }
     }

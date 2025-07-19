@@ -23,7 +23,8 @@ public class ModuleStorage {
                 new HighJump(),
                 new NoRender(),
                 new Flight(),
-                new FightAura()
+                new FightAura(),
+                new Particles()
         ));
     }
 

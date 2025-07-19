@@ -1,6 +1,6 @@
 package fun.exort.mixin;
 
-import fun.exort.ExortWare;
+import fun.exort.CometaWare;
 import fun.exort.event.list.EventPlayerUpdate;
 import net.minecraft.client.network.ClientPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,6 +12,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ClientPlayerEntityMixin {
     @Inject(method = "tick", at = @At(value = "HEAD"))
     private void tick(CallbackInfo ci) {
-        ExortWare.getInstance().getEventBus().post(new EventPlayerUpdate());
+        CometaWare.getInstance().getEventBus().post(new EventPlayerUpdate());
     }
 }

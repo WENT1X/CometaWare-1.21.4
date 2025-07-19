@@ -1,6 +1,6 @@
 package fun.exort.mixin;
 
-import fun.exort.ExortWare;
+import fun.exort.CometaWare;
 import fun.exort.event.list.EventUpdate;
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,6 +18,6 @@ public class MinecraftClientMixin {
 
     @Inject(method = "tick", at = @At(value = "HEAD"))
     private void tick(CallbackInfo ci) {
-        ExortWare.getInstance().getEventBus().post(new EventUpdate());
+        CometaWare.getInstance().getEventBus().post(new EventUpdate());
     }
 }

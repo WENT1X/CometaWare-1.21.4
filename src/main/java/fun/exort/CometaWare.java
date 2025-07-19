@@ -9,15 +9,15 @@ import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.client.MinecraftClient;
 
-public class ExortWare implements ModInitializer {
+public class CometaWare implements ModInitializer {
 
-	private static ExortWare instance;
+	private static CometaWare instance;
 
 	private final EventBus eventBus;
 
 	private final ModuleStorage moduleStorage;
 
-	public ExortWare() {
+	public CometaWare() {
 		instance = this;
 
 		eventBus = new EventBus();
@@ -26,8 +26,8 @@ public class ExortWare implements ModInitializer {
 		moduleStorage = new ModuleStorage();
 	}
 
-	public static ExortWare getInstance() {
-		return instance == null ? new ExortWare() : instance;
+	public static CometaWare getInstance() {
+		return instance == null ? new CometaWare() : instance;
 	}
 
 	public EventBus getEventBus() {

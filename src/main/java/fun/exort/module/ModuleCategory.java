@@ -5,5 +5,5 @@ public enum ModuleCategory {
     MOVEMENT,
     RENDER,
     PLAYER,
-    WORLD
+    OTHER
 }

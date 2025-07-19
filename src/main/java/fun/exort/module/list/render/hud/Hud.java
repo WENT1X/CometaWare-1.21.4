@@ -50,11 +50,11 @@ public class Hud extends Module {
 
         Matrix4f matrix = context.getMatrices().peek().getPositionMatrix();
 
-        String watermarkTitle = "ExortWare  >  " + mc.player.getName().getString() + "  >  " + mc.getCurrentFps() + " fps";
+        String watermarkTitle = "CometaWare  >  " + mc.player.getName().getString() + "  >  " + mc.getCurrentFps() + " fps";
 
         BuiltBlur blur = Builder.blur()
                 .size(new SizeState(BIKO_FONT.get().getWidth(watermarkTitle, 10) + 15, 20))
-                .color(new QuadColorState(new Color(30, 30, 30, 255)))
+                .color(new QuadColorState(new Color(74, 19, 163, 255)))
                 .radius(new QuadRadiusState(4))
                 .smoothness(1f)
                 .blurRadius(6)

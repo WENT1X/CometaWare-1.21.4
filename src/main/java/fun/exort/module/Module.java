@@ -1,6 +1,6 @@
 package fun.exort.module;
 
-import fun.exort.ExortWare;
+import fun.exort.CometaWare;
 import fun.exort.module.list.render.hud.Hud;
 import fun.exort.module.settings.Setting;
 import fun.exort.util.chat.ChatUtil;
@@ -81,17 +81,17 @@ public class Module {
     }
 
     public void onEnable() {
-        ExortWare.getInstance().getEventBus().register(this);
+        CometaWare.getInstance().getEventBus().register(this);
     }
 
     public void onDisable() {
-        ExortWare.getInstance().getEventBus().unregister(this);
+        CometaWare.getInstance().getEventBus().unregister(this);
     }
 
     public void toggle() {
         setEnabled(!isEnabled());
 
-        if (ExortWare.getInstance().getModuleStorage().get(Hud.class).notification.getValue() && ExortWare.getInstance().getModuleStorage().get(Hud.class).isEnabled()) {
+        if (CometaWare.getInstance().getModuleStorage().get(Hud.class).notification.getValue() && CometaWare.getInstance().getModuleStorage().get(Hud.class).isEnabled()) {
             if (enabled) {
                 ChatUtil.send(getName() + " был включен.");
             } else {
