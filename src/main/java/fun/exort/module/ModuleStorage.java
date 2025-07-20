@@ -1,6 +1,7 @@
 package fun.exort.module;
 
 import fun.exort.module.list.combat.*;
+import fun.exort.module.list.misc.NameProtect;
 import fun.exort.module.list.movement.*;
 import fun.exort.module.list.player.*;
 import fun.exort.module.list.render.*;
@@ -24,7 +25,9 @@ public class ModuleStorage {
                 new NoRender(),
                 new Flight(),
                 new FightAura(),
-                new Particles()
+                new Particles(),
+                new NameProtect(),
+                new FreeCam()
         ));
     }
 

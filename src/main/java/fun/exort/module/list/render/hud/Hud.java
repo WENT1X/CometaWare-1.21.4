@@ -14,12 +14,9 @@ import fun.exort.util.render.builders.states.SizeState;
 import fun.exort.util.render.msdf.MsdfFont;
 import fun.exort.util.render.renderers.impl.BuiltBlur;
 import fun.exort.util.render.renderers.impl.BuiltText;
-import net.minecraft.advancement.criterion.EntityHurtPlayerCriterion;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import org.joml.Matrix4f;
 
-import javax.swing.text.html.parser.Entity;
 import java.awt.*;
 import java.util.function.Supplier;
 
