@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "fun.cometaware.mixin",
+  "package": "fun.exort.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "EntityMixin",
