@@ -2,7 +2,6 @@ package fun.cometaware;
 
 import com.google.common.eventbus.EventBus;
 import com.google.common.eventbus.Subscribe;
-import de.florianmichael.viamcp.ViaMCP;
 import fun.cometaware.event.list.EventKeyInput;
 import fun.cometaware.module.Module;
 import fun.cometaware.module.ModuleStorage;
@@ -56,12 +55,6 @@ public class CometaWare implements ModInitializer {
 		if (!HWIDChecker.isValidHWID()) {
 			LOGGER.error("Unauthorized HWID! Shutting down...");
 			throw new RuntimeException("Invalid HWID");
-		}
-		try {
-			ViaMCP.create();
-			ViaMCP.INSTANCE.initAsyncSlider();
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
 		getModuleStorage().injectRegisterModules();
 	}
