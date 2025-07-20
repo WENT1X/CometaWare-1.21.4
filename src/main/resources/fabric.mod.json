@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "exortware",
+	"id": "cometaware",
 	"version": "${version}",
-	"name": "ExortWare",
+	"name": "CometaWare",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"

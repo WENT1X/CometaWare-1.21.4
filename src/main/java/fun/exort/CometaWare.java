@@ -5,6 +5,7 @@ import com.google.common.eventbus.Subscribe;
 import fun.exort.event.list.EventKeyInput;
 import fun.exort.module.Module;
 import fun.exort.module.ModuleStorage;
+import fun.exort.util.hwid.HWID;
 import fun.exort.util.hwid.HWIDChecker;
 import net.fabricmc.api.ModInitializer;
 
@@ -44,6 +45,13 @@ public class CometaWare implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		try {
+			// Выводим HWID в лог
+			String hwid = HWID.getHWID();
+			LOGGER.info("Your HWID: " + hwid);
+		} catch (Exception e) {
+			LOGGER.error("Failed to generate HWID: " + e.getMessage());
+		}
 		if (!HWIDChecker.isValidHWID()) {
 			LOGGER.error("Unauthorized HWID! Shutting down...");
 			throw new RuntimeException("Invalid HWID");

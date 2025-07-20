@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class MinecraftClientMixin {
     @Inject(method = "getWindowTitle", at = @At(value = "HEAD"), cancellable = true)
     private void getWindowTitle(CallbackInfoReturnable<String> cir) {
-        cir.setReturnValue("ExortWare 1.21.4 | ver: 1.0.0");
+        cir.setReturnValue("CometaWare 1.21.4 | ver: 1.0.1");
     }
 
     @Inject(method = "tick", at = @At(value = "HEAD"))

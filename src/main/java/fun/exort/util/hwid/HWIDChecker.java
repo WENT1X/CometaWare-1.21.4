@@ -8,7 +8,7 @@ import java.util.List;
 
 public class HWIDChecker {
     // Замените на вашу RAW-ссылку с Pastebin (https://pastebin.com/raw/xxxxxxxx)
-    private static final String PASTEBIN_URL = "https://pastebin.com/raw/xxxxxxxx";
+    private static final String PASTEBIN_URL = "https://pastebin.com/raw/xa7EkypP";
 
     public static boolean isValidHWID() {
         try {
